@@ -1,0 +1,30 @@
+<% if (locals.users) { %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% users.forEach(function(user) { %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.age %></td>
+    <td><%= user.email %></td>
+    <td><%= user.address %></td>
+    <td><%= user.phone %></td>
+    <td><a href="/manage/<%= user.phone %>" class="btn-outlined">Edit</a></td>
+    <td>
+      <form action="/manage/delete/<%= user.phone %>" method="post">
+        <button class="btn">Delete</button>
+      </form>
+    </td>
+  </tr>
+  <% }); %>
+</table>
+<% } else { %>
+<div class="no-info">No users found</div>
+<% } %>

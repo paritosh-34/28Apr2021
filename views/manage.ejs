@@ -1,0 +1,19 @@
+<div class="search-div">
+  <%- include("partials/messages") %>
+  <form action="/manage/search" method="post">
+    <label for="name">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Search by name"
+        value="<%= typeof name != 'undefined' ? name : '' %>"
+        required
+      />
+    </label>
+    <button class="search-btn">Search</button>
+  </form>
+</div>
+
+<h2>Manage users</h2>
+<%- include("partials/users") %>

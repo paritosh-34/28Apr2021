@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-green: rgba(0, 120, 0, 0.1);
+  --background-red: rgba(255, 0, 0, 0.1);
+  --primary-red: rgb(255, 0, 0);
+  --primary-green: rgb(0, 120, 0);
+  --primary-blue: rgb(0, 153, 255);
+}
+
+nav {
+  padding: 2em;
+  background-color: var(--background-green);
+  display: flex;
+}
+
+.nav-right {
+  display: inline-block;
+  margin-left: auto;
+
+  display: flex;
+  gap: 1em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outlined {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-green);
+  background-color: transparent;
+  border: 2px solid var(--primary-green);
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn2 {
+  border: none;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  width: 13em;
+  margin-top: 1em;
+  border-radius: 25px;
+}
+
+.login-container {
+  margin: 1em;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.login-container h1 {
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.5em;
+  width: 100%;
+}
+
+.error-ul {
+  margin: 1em 0px;
+  list-style: none;
+}
+.error-li {
+  background-color: var(--background-red);
+  color: var(--primary-red);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.success-li {
+  background-color: var(--background-green);
+  color: var(--primary-green);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+
+table {
+  margin: 2em auto;
+}
+table td {
+  padding: 0.5em;
+}
+
+h2 {
+  text-align: center;
+}
+
+.no-info {
+  color: rgb(112, 112, 112);
+  margin-top: 0.5rem;
+  font-size: 1.5em;
+  font-style: italic;
+  text-align: center;
+}
+
+.search-div {
+  max-width: 300px;
+  margin: 2em auto;
+}
+
+.search-div form {
+  display: flex;
+}
+
+.search-btn {
+  padding: 0.5em 1em;
+}

@@ -1,0 +1,82 @@
+<div class="login-container">
+  <h1>Edit</h1>
+  <form action="/manage/edit/<%= phone %>" method="post">
+    <label for="name">
+      Name:<br />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter your name"
+        value="<%= typeof name != 'undefined' ? name : '' %>"
+        required
+      />
+    </label>
+
+    <br />
+    <br />
+
+    <label for="age">
+      Age:<br />
+      <input
+        type="number"
+        name="age"
+        id="age"
+        placeholder="Enter your age"
+        value="<%= typeof age != 'undefined' ? age : '' %>"
+        required
+      />
+    </label>
+
+    <br />
+    <br />
+
+    <label for="email">
+      Email:<br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        value="<%= typeof email != 'undefined' ? email : '' %>"
+        required
+      />
+    </label>
+
+    <br />
+    <br />
+
+    <label for="address">
+      Address:<br />
+      <input
+        type="address"
+        name="address"
+        id="address"
+        placeholder="Enter your address"
+        value="<%= typeof address != 'undefined' ? address : '' %>"
+        required
+      />
+    </label>
+
+    <br />
+    <br />
+
+    <label for="phone">
+      Phone:<br />
+      <input
+        type="number"
+        name="phone"
+        id="phone"
+        placeholder="Enter your phone"
+        value="<%= typeof phone != 'undefined' ? phone : '' %>"
+        required
+      />
+    </label>
+
+    <br />
+    <br />
+
+    <%- include("partials/messages") %>
+    <button class="btn2" style="width: 100%">Submit</button>
+  </form>
+</div>
